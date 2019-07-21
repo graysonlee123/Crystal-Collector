@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal game!</title>
+
+    <link type="text/stylesheet" rel="stylesheet" href="./assets/css/reset.css">
+    <link type="text/stylesheet" rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/javascript/javascript.js"></script>
+</head>
+
+<body>
+    <h1>Crystals Collector!</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolor.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ratione quisquam exercitationem?</p>
+    </div>
+    <div class="row3">
+        <h2 id="randomNumberBox">0</h2>
+        <p id="gameEndMessage">Win / Loss status</p>
+        <p>Wins: <span id="winsDisplay">0</span></p>
+        <p>Losses: <span id="lossesDisplay">0</span></p>
+    </div>
+    <div id="crystalsContainer">
+        <img src="http://via.placeholder.com/100" alt="crystal1" class="crystal" id="crystal1">
+        <img src="http://via.placeholder.com/100" alt="crystal2" class="crystal" id="crystal2">
+        <img src="http://via.placeholder.com/100" alt="crystal3" class="crystal" id="crystal3">
+        <img src="http://via.placeholder.com/100" alt="crystal4" class="crystal" id="crystal4">
+    </div>
+    <p>Your total score is:</p>
+    <p>0</p>
+
+    <script>
+
+        game.initialize();
+
+        $("#crystalsContainer").on("click", ".crystal", function (e) {
+            let crystalID = e.currentTarget.id;
+
+            if (crystalID == "crystal1") {
+                userGuess += crystal1Val;
+                console.log(userGuess);
+            } else if (crystalID == "crystal2") {
+                userGuess += crystal2Val;
+                console.log(userGuess);
+            } else if (crystalID == "crystal3") {
+                userGuess += crystal3Val;
+                console.log(userGuess);
+            } else {
+                userGuess += crystal4Val;
+                console.log(userGuess);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
