@@ -1,9 +1,10 @@
 body {
     background: url("../images/pattern.png");
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Geostar', 'Times New Roman', Times, serif;
     font-size: 3em;
     font-weight: bold;
 }
