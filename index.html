@@ -8,7 +8,8 @@
     <title>Crystal game!</title>
 
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,35 +18,60 @@
 
 <body>
     <div class="container mt-4">
-        <header class = "py-3 text-center">Crystals Collector!</header>
+        <header class="py-3 text-center">Crystals Collector!</header>
+
         <div class="row">
-            <div class="col-12 col-md-8">
-                <div class="row">
-                    <div class="col-6 row3">
-                        <h2 id="randomNumberBox" class="container bg-dark rounded text-white d-inline-block text-center align-center">0</h2>
-                        <p id="gameEndMessage"></p>
-                        <p>Wins: <span id="winsDisplay">0</span></p>
-                        <p>Losses: <span id="lossesDisplay">0</span></p>
+            <div class="col-12 col-lg-9">
+                <div class="row my-4">
+                    <div class="container col-12 col-md-8 p-3 mb-3 text-center bg-primary text-white rounded">
+                        <h2 id="randomNumberBox" class="text-center align-middle">0</h2>
+                        <hr>
+                        <p class="text-dark">Your current count is: <span id="userScoreDisplay"
+                                class="text-light">0</span></p>
                     </div>
-                    <div id="crystalsContainer" class="col-6">
-                        <img src="http://via.placeholder.com/100" alt="crystal1" class="crystal" id="crystal1">
-                        <img src="http://via.placeholder.com/100" alt="crystal2" class="crystal" id="crystal2">
-                        <img src="http://via.placeholder.com/100" alt="crystal3" class="crystal" id="crystal3">
-                        <img src="http://via.placeholder.com/100" alt="crystal4" class="crystal" id="crystal4">
+                    <div class="container col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Stats
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Wins: <span id="winsDisplay">0</span></li>
+                                <li class="list-group-item">Losses: <span id="lossesDisplay">0</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="crystalsContainer" class="container col-12 mb-4">
+                        <div class="row">
+                            <div class="col-6 col-md-12 mb-3">
+                                <img src="./assets/images/crystal1.svg" alt="crystal1" class="crystal img-fluid float-left rounded" id="crystal1">
+                                <img src="./assets/images/crystal2.svg" alt="crystal2" class="crystal img-fluid float-left rounded" id="crystal2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-md-12 mb-3">
+                                <img src="./assets/images/crystal3.svg" alt="crystal3" class="crystal img-fluid float-left rounded" id="crystal3">
+                                <img src="./assets/images/crystal4.svg" alt="crystal4" class="crystal img-fluid float-left rounded" id="crystal4">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="rounded bg-dark text-white p-4 col-12 col-md-4">
-                    <h2 class = "text-muted">How to play</h2>
-                    <p>You will be given a random number at the start of the game.</p>
-                    <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-                    <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-                    <p>The value of each crystal is hidden from you uintil you click on it.</p>
-                    <p>Each time when the game starts, the game will change the values of each crystal. Good luck!</p>
+
+            <!-- <p id="gameEndMessage"></p> -->
+
+            <div class="container-fluid col-12 col-lg-3 rounded bg-dark text-white p-4">
+                <h2 class="text-muted">How to play</h2>
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to
+                    your total score.</p>
+                <p>You win the game by matching your total score to the random number. You lose the game if your total
+                    score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you uintil you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each crystal. Good luck!</p>
             </div>
         </div>
-        <p>Your total score is:</p>
-        <p id="userScoreDisplay">0</p>
     </div>
 
     <script>

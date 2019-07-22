@@ -1,8 +1,24 @@
 body {
     background: url("../images/pattern.png");
-    background-color: red;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.crystal {
+    max-width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 #randomNumberBox {
-    height: 300px;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+#userScoreDisplay {
+    font-size: 1.5em;
 }
