@@ -9,9 +9,10 @@ header {
 }
 
 .crystal {
-    max-width: 48%;
-    margin-left: 1%;
-    margin-right: 1%;
+    max-width: 100%;
+    cursor: pointer;
+    /* margin-left: 1%;
+    margin-right: 1%; */
 }
 
 #randomNumberBox {
