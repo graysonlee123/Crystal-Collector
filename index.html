@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./assets/javascript/javascript.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Geostar|Poppins:400,700&display=swap" rel="stylesheet">
 </head>
@@ -97,34 +96,7 @@
     </div>
     </div>
 
-    <script>
-
-        game.initialize();
-
-        $("#crystalsContainer").on("click", ".crystal", function (e) {
-            let crystalID = e.currentTarget.id;
-
-            if (crystalID == "crystal1") {
-                userGuess += crystal1Val;
-                console.log(userGuess);
-            } else if (crystalID == "crystal2") {
-                userGuess += crystal2Val;
-                console.log(userGuess);
-            } else if (crystalID == "crystal3") {
-                userGuess += crystal3Val;
-                console.log(userGuess);
-            } else {
-                userGuess += crystal4Val;
-                console.log(userGuess);
-            }
-
-            $("#userScoreDisplay").text(userGuess);
-
-            game.checkForWin();
-
-
-        });
-    </script>
+    <script src="./assets/javascript/javascript.js"></script>
 
 </body>
 

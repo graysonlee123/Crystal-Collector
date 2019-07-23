@@ -37,21 +37,47 @@ game = {
         } else {
             console.log("No win or loss");
         }
-    }, 
+    },
 
-    win: function() {
+    win: function () {
         game.initialize();
-        wins ++;
+        wins++;
         $("#gameEndMessage").text("You won the last round!");
-        $("#winsDisplay").text("Wins: " + wins);
+        $("#winsDisplay").text(wins);
         $("#userScoreDisplay").text("0");
     },
 
     lose: function () {
         game.initialize();
-        losses ++;
+        losses++;
         $("#gameEndMessage").text("You lost the last round!");
-        $("#lossesDisplay").text("Losses: " + losses);
+        $("#lossesDisplay").text(losses);
         $("#userScoreDisplay").text("0");
     }
 }
+
+game.initialize();
+
+$("#crystalsContainer").on("click", ".crystal", function (e) {
+    let crystalID = e.currentTarget.id;
+
+    if (crystalID == "crystal1") {
+        userGuess += crystal1Val;
+        console.log(userGuess);
+    } else if (crystalID == "crystal2") {
+        userGuess += crystal2Val;
+        console.log(userGuess);
+    } else if (crystalID == "crystal3") {
+        userGuess += crystal3Val;
+        console.log(userGuess);
+    } else {
+        userGuess += crystal4Val;
+        console.log(userGuess);
+    }
+
+    $("#userScoreDisplay").text(userGuess);
+
+    game.checkForWin();
+
+
+});
