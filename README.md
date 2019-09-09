@@ -4,7 +4,7 @@ A mathematical game based on remembering and lining up numbers.
 
 ## Deployment
 
-View the deployed site [here](http://graysonlee123.github.io/Crystal-Game).
+View the deployed site [here](http://graysonlee123.github.io/Crystal-Collector).
 
 ## Built With
 
